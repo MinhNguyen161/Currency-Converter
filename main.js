@@ -1,6 +1,5 @@
-
-let fromCurrency = prompt("from currency"); 
-let toCurrency = prompt("to currency");
+let fromCurrency = "";
+let toCurrency = "";
 let amountInput = document.getElementById('amount');
 let convertButton = document.getElementById('convertButton');
 function convert(ratio,amn){
@@ -13,12 +12,16 @@ function formatCurrency(type, value) {
     });
     return formatter.format(value);
   }
+function change(){
+     fromCurrency = prompt("from currency"); 
+     toCurrency = prompt("to currency");
+}
     
 function myFunction() {
     console.log(fromCurrency)
     if (!fromCurrency || !toCurrency ){
-        let fromCurrency = prompt("enter from currency again"); 
-        let toCurrency = prompt(" enter to currency again");
+         fromCurrency = prompt("enter from currency again"); 
+         toCurrency = prompt(" enter to currency again");
     }
     fromCurrency = fromCurrency.toUpperCase()
     toCurrency = toCurrency.toUpperCase()
@@ -51,7 +54,7 @@ function myFunction() {
     }
     if (fromCurrency === 'VND'){
         if (toCurrency === "USD"){
-            ratio = 0.0000043
+            ratio = 0.000043
             let result = formatCurrency('usd',convert(ratio,amn))
             document.getElementById("demo").innerHTML =
             amn +  " in " +fromCurrency + " is " + result;  
