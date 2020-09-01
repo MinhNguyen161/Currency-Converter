@@ -12,6 +12,41 @@ function formatCurrency(type, value) {
       style: "currency"
     });
     return formatter.format(value);
+} 
+function converttoVND(amn){
+    let ratio = 1;
+    if (fromCurrency === "USD"){
+        ratio = 23176.39
+         result = convert(ratio,amn)
+        console.log(result)
+        document.getElementById("demo").innerHTML =
+        amn +  " in " +fromCurrency + " is " + formatCurrency('VND',convert(ratio,amn));
+        return result  
+
+            }
+    else if( fromCurrency === "KRW"){
+        ratio = 19,56
+         result = convert(ratio,amn)
+        document.getElementById("demo").innerHTML =
+        amn +  " in " +fromCurrency + " is " + formatCurrency('VND',convert(ratio,amn));  
+        return result  
+
+            }
+    else if( fromCurrency === "EUR"){
+        ratio = 27775.00
+         result = convert(ratio,amn)
+        document.getElementById("demo").innerHTML =
+        amn +  " in " +fromCurrency + " is " + formatCurrency('VND',convert(ratio,amn));  
+        return result  
+            }
+    else if( fromCurrency ==="VND"){
+        ratio = 1
+         result = convert(ratio,amn)
+        document.getElementById("demo").innerHTML =
+        amn +  " in " +fromCurrency + " is " + formatCurrency('VND',convert(ratio,amn));  
+        return result  
+            }
+
 }
 function change(){
     let a
@@ -172,8 +207,8 @@ function coin(){
     let fromC = document.getElementById("fromC")
     fromCurrency= fromC.value
     toCurrency = "VND"
-    let a = amountInput.value
-    let sheets = [500, 200, 100, 50, 20, 10, 5, 2, 1]
+    let a = converttoVND(amountInput.value)
+    let sheets = [500000, 200000, 100000, 50000, 20000, 10000, 5000, 2000, 1000]
     let am = []
     let b,c
     for (num in sheets) {
@@ -186,7 +221,7 @@ function coin(){
     for (num in sheets){
         if(am[num]!==0){        
             document.getElementById("coin-demo").innerHTML +=
-            `<p>${am[num]}x ${sheets[num]}k</p>` 
+            `<p>${am[num]}x ${sheets[num]/100}k</p>` 
         }
     }
 }
