@@ -4,29 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
 </head>
+
+
 <body>
+    
+    </div class="container">
+        <br/>
+        <div>
+            <h1 style="text-align: center;">Currency Exchange!</h1>
+        </div>
+        <div class="contatiner ">
+             <input class="m" type="number" id="amount" />
+    </div>
+    <br/>
+    <div class="container">
+            <div class="contatiner">
+                <div class= "row">
+                    <div class= "col-6 text-center" style="width: 300px;">
+                        <label for="fromC">From Currency :</label>
+                        <select name="fromC" id="fromC">
+                        <option value="USD">USD</option>
+                        <option value="EUR">EUR</option>
+                        <option value="VND">VND</option>
+                        <option value="KRW">KRW</option>
+                        </select>
+                    </div>
+                    <div class= "col-6 text-center">
+                        <label for="toC">To Currency :</label>
+                        <select name="toC" id="toC">
+                        <option value="USD">USD</option>
+                        <option value="EUR">EUR</option>
+                        <option value="VND">VND</option>
+                        <option value="KRW">KRW</option>
+                        </select>
+                    </div>
 
+                </div>
+                
+                <!-- <button onclick="change()" id ="convertButton">
+                    Change Currency! </button> -->
+            </div>  
+            <div class="contatiner">
+                <button onclick="myFunction()" id ="convertButton">
+                    Convert! 
+                </button>
+            </div>
+            <div class="contatiner">
+                <button type="button" onclick="change()" class="btn btn-warning">Do the swap !</button>
+            </div>
 
+            <div class="contatiner">
+                <p id="demo"></p>
+            </div>
+            <div class="contatiner">
+                <button type="button" onclick="coin()" class="btn btn-warning"> Bill exchange !</button>
+            </div>
+            <div class="contatiner">
+                <div id="coin-demo"></div>
+            </div>
 
-
-
-
-
-    <h1> Currency Converter </h1>
-    <input type="number" id="amount" />
-
-    <p id="demo"></p>
-    <button onclick="change()" id ="convertButton">
-        Change Currency! </button>
-    <button onclick="myFunction()" id ="convertButton">
-        Convert! </button>
-
+    </div>
 
 
 
 
     <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
 
 
